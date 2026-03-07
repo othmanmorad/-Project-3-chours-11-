@@ -89,7 +89,7 @@ public:
 	_declspec(property(get = GetPhone, put = SetPhone))string Phone;
 
 
-	string FullNmae()
+	string FullName()
 	{
 		return _FirstName + " " + _LastName;
 	}
@@ -100,7 +100,7 @@ public:
 		cout << "\n------------------" << endl;
 		cout << "\nFirst Nmae : "<<_FirstName << endl;
 		cout << "\nLast Nmae : " << _LastName << endl;
-		cout << "\nFull Nmae : " << FullNmae() << endl;
+		cout << "\nFull Nmae : " << FullName() << endl;
 		cout << "\nEmail : " << _Email << endl;
 		cout << "\nPhone : " << _Phone << endl;
 		cout << "\n------------------" << endl;
