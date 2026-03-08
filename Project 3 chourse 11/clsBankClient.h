@@ -348,5 +348,12 @@ public:
 		*this = _GetEmptyClientObject(); // make this object empty after delete it from file.
         return true;
     }
+
+
+
+	static vector<clsBankClient> GetClientsList()
+	{
+		return _LoadClientsDataFromFile("Clients.txt");
+	}
 	
 };
