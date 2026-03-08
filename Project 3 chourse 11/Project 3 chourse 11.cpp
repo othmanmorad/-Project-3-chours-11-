@@ -2,6 +2,8 @@
 #include<iomanip>
 #include "clsBankClient.h"
 #include "clsInputValidate.h"
+#include "clsUtil.h"
+
 
 void ReadClientInfo(clsBankClient& Client)
 {
@@ -181,7 +183,7 @@ void PrintClientRecordLine(clsBankClient Client)
 
 
 
-void ShowClintsList()
+void ShowClientsList()
 {
     vector<clsBankClient>vClients = clsBankClient::GetClientsList();
 
@@ -221,6 +223,50 @@ void ShowClintsList()
 
 
 
+void PrintClientRecordBalanceLine(clsBankClient Client)
+{
+
+    cout << "|  " << setw(15) << left << Client.AccountNumber();
+    cout << "|  " << setw(20) << left << Client.FullName();
+    cout << "|  " << setw(12) << left << Client.AccountBalance;
+
+}
+
+void ShowTotalBalnces()
+{
+    vector<clsBankClient>vClients = clsBankClient::GetClientsList();
+
+    cout << "\n\t\t\t\t\t\t\t\tClients List (" << vClients.size() << ") Client(s)\n";
+
+    cout << "________________________________________________________________________________________________________________________\n";
+
+    cout << "|  " << setw(15) << left << "AccountNumber";
+    cout << "|  " << setw(20) << left << "FullName";
+    cout << "|  " << setw(12) << left << "AccountBalance";
+
+    double TotalBalances = clsBankClient::GetTotalBalances();
+    if (vClients.size() > 0)
+    {
+        cout << "\n________________________________________________________________________________________________________________________\n";
+        for (clsBankClient Client : vClients)
+        {
+            PrintClientRecordBalanceLine(Client);
+            cout << "\n________________________________________________________________________________________________________________________\n";
+        }
+
+		cout << "\n\t\t\t\t\t\t\t\tTotal Balances = " << TotalBalances<< endl;
+		cout << clsUtil::Tabs(10) << "Total Balances in Text : " << clsUtil::NumberToText(TotalBalances) << endl;
+
+    }
+    else
+    {
+        cout << "\n\t\t\t\t\t\t\t\tNo Clients Available In the System !\n";
+    }
+
+
+
+
+}
 
 
 
@@ -228,7 +274,7 @@ void ShowClintsList()
 int main()
 
 {
-	ShowClintsList();  
+    ShowTotalBalnces();
     system("pause>0");
     return 0;
 }
