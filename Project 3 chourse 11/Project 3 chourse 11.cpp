@@ -73,50 +73,7 @@ void UpdateClient()
 }
 
 
-void AddClient()
-{
-    string AccountNumber = "";
 
-    cout << "Enter Account Number : ";
-    AccountNumber = clsInputValidate::ReadString();
-
-    while (clsBankClient::IsClientExist(AccountNumber))
-    {
-        cout << "Account Number was not found , enter anoter one.";
-        AccountNumber = clsInputValidate::ReadString();
-    }
-
-    clsBankClient NewClient = clsBankClient::GetAddNewClientObject(AccountNumber);
-
-  
-
-
-    cout << "\nAdd Client Info : \n";
-    ReadClientInfo(NewClient);
-
-    clsBankClient::enSaveResults SaveResult = NewClient.Save();
-
-
-    switch (SaveResult)
-    {
-    case clsBankClient::enSaveResults::svSucceeded:
-    {
-        cout << "\nAccount Added Successfully.\n";
-        NewClient.Print();
-        break;
-    }
-    case clsBankClient::enSaveResults::svFaildEmptyObject:
-    {
-        cout << "\n Error Account was not saved because Account number is used !\n";
-        break;
-    }
-    case clsBankClient::svFaildAccountNumberExsist:
-    {
-        cout << "\nFailed to Add Client, Error Account was not saved because it's used\n";
-        break;
-    }
-    }
-}
 
 
 

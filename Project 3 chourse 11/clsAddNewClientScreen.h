@@ -36,7 +36,7 @@ private:
 
 
 
-   static void Print(clsBankClient Client)
+   static void _Print(clsBankClient Client)
    {
        cout << "\nClient Card:";
        cout << "\n___________________";
@@ -91,7 +91,7 @@ public:
         case clsBankClient::enSaveResults::svSucceeded:
         {
             cout << "\nAccount Added Successfully.\n";
-            Print(NewClient);
+            _Print(NewClient);
             break;
         }
         case clsBankClient::enSaveResults::svFaildEmptyObject:
