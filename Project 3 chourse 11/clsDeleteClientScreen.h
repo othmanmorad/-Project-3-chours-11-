@@ -49,7 +49,7 @@ public:
 
         clsBankClient Client = clsBankClient::Find(AccountNumber);
 
-        Client.Print();
+        _Print(Client);
 
         cout << "Are you sure you want to delete this account ? y/n : ";
 
