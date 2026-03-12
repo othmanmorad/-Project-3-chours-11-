@@ -195,8 +195,8 @@ public:
 
 
 
-
-    void Print()
+    //No UI code in object
+    /*void Print()
     {
         cout << "\nClient Card:";
         cout << "\n___________________";
@@ -211,6 +211,7 @@ public:
         cout << "\n___________________\n";
 
     }
+    */
 
     static clsBankClient Find(string AccountNumber)
     {
