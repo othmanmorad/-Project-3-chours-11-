@@ -4,7 +4,7 @@
 #include "clsScreen.h"
 #include"clsInputValidate.h"
 #include"clsBankClient.h"	
-class clsDepositScreen : protected clsScreen
+class clsWithdrawScreen : protected clsScreen
 {
 private:
 
@@ -14,7 +14,7 @@ private:
 		cout << "Enter Account Number : ";
 		cin >> AccountNumber;
 		return AccountNumber;
-	}	
+	}
 
 	static void _Print(clsBankClient Client)
 	{
@@ -33,34 +33,41 @@ private:
 
 public:
 
-	static void ShowDepositScreen()
+	static void ShowWithDrawScreen()
 	{
 
 		_DrawScreenHeader("\t\tDeposit Screen");
 		string AccountNumber = _ReadAccountNumber();
 		while (!clsBankClient::IsClientExist(AccountNumber))
 		{
-			cout << "Client with "<< AccountNumber<<" was not found, enter anoter one.";
+			cout << "Client with " << AccountNumber << " was not found, enter anoter one.";
 			AccountNumber = _ReadAccountNumber();
 		}
 		clsBankClient Client = clsBankClient::Find(AccountNumber);
 		_Print(Client);
 
 
-		cout << "\nEnter Amount to Deposit : ";
+		cout << "\nEnter Amount to Withdraw : ";
 		double Amount = clsInputValidate::ReadDblNumber();
 
-		cout << "\nAre you sure you want to make a deposit for this client? [y/n] : ";	
+		cout << "\nAre you sure you want to make a withdraw for this client? [y/n] : ";
 		char Answer = 'n';
 		cin >> Answer;
 
 		if (Answer == 'Y' || Answer == 'y')
 		{
-			
-			Client.Deposit(Amount);
-			Client.Save();
-			cout << "\nAmount Deposited Successfully.\n";
-			cout << "\nNew Balance : " << Client.AccountBalance << "\n";
+			if (Client.Withdraw(Amount))
+			{
+				
+				cout << "\nAmount Withdrawn Successfully.\n";
+				cout << "\nNew Balance : " << Client.AccountBalance << "\n";
+			}
+			else
+			{
+				cout << "\nWithdraw Failed, Not enough balance.\n";
+				cout << "\nAmount to Withdraw : " << Amount;
+				cout << "\nCurrent Balance : " << Client.AccountBalance << "\n";
+			}
 		}
 		else
 		{
@@ -68,8 +75,6 @@ public:
 
 		}
 	}
-
-
 
 
 };
