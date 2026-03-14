@@ -170,11 +170,7 @@ private:
 
 		}
 
-		default:
-		{
-			cout << setw(37) << left << "\nInvalid Option, Choose Again ...\n";
-			break;
-		}
+		
 		}
 		return MainMenuOption;
 	}

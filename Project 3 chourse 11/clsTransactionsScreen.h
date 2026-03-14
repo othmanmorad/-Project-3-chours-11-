@@ -5,6 +5,7 @@
 #include"clsInputValidate.h"
 #include"clsDepositScreen.h"
 #include"clsWithdrawScreen.h"
+#include"clsShowTotalBalancesScreen.h"
 using namespace std;
 class clsTransactionsScreen : protected clsScreen	
 {
@@ -37,7 +38,8 @@ private:
 
 		static void _ShowTotalBalanceScreen()
 		{
-			cout << setw(37) << left << "\nTotal Balance Screen Will be here ...\n";
+			//cout << setw(37) << left << "\nTotal Balance Screen Will be here ...\n";
+			clsShowTotalBalancesScreen::ShowClientsList();
 		}
 		static void _ShowMainMenuScreen()
 		{
@@ -77,16 +79,9 @@ private:
 			}
 			case enShowMainMenue:
 			{
-				system("cls");
-				_ShowMainMenuScreen();
-				_GoBackToTransactionsMenu();
-				break;
+				//not implemented 
 			}
-			default:
-			{
-				cout << setw(37) << left << "\nInvalid Option, Choose Again ...\n";
-				break;
-			}
+			
 			}
 			return TransactionsMenuOption;
 		}
