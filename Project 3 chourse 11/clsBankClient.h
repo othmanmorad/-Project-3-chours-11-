@@ -371,4 +371,17 @@ public:
 		return TotalBalances;   
     }
 	
+	void Deposit(double Amount)
+	{
+		AccountBalance += Amount;
+		Save();
+	}
+
+
+
+
+
+
+
+
 };
