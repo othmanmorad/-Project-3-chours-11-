@@ -9,6 +9,7 @@
 #include"clsUpdateClientScreen.h"
 #include"clsFindClientScreen.h"
 #include"clsTransactionsScreen.h"
+#include"clsManageUsersScreen.h"
 using namespace std;
 class clsMainScreen : protected clsScreen
 {
@@ -44,14 +45,12 @@ private:
 		clsClientListScreen::ShowClientsList();
 	}
 
-
 	static void _ShowAddNewClientScreen()
 	{
 		//cout << setw(37) << left << "\nAdd Client Screen Will be here ...\n";
 		clsAddNewClientScreen::ShowAddNewClientScreen();
 
 	}
-
 
 	static void _ShowDeleteClientScreen()
 	{
@@ -82,7 +81,8 @@ private:
 
 	static void _ShowManageUsersScreen()
 	{
-		cout << setw(37) << left << "\nManage Users Screen Will be here ...\n";
+		//cout << setw(37) << left << "\nManage Users Screen Will be here ...\n";
+		clsManageUsersScreen::ShowManageUsersScreen();	
 	}
 
 	static void _ShowEndScreen()
@@ -107,7 +107,6 @@ private:
 			break;
 
 		}
-
 		case enAddNewClient:
 
 		{
@@ -117,8 +116,6 @@ private:
 			break;
 
 		}
-
-
 		case enDeleteClient:
 		{
 			system("cls");
@@ -127,8 +124,6 @@ private:
 			break;
 
 		}
-
-
 		case enUpdateClient:
 		{
 			system("cls");
