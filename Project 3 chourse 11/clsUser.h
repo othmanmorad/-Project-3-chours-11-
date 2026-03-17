@@ -7,6 +7,7 @@
 #include "clsPerson.h"
 #include "clsString.h"
 #include "clsBankClient.h"
+#include "clsUsersListScreen.h"
 
 using namespace std;
 class clsUser : public clsPerson
@@ -17,14 +18,15 @@ private:
 	enMode _Mode;
 	string _UserName;
 	string _Password;
-	string _Permissions;
+	int _Permissions;
 	bool _MarkedForDelete = false;	
 	
 	static clsUser _ConvertUserLineToUserObject(string UserLine, string Spreator ="#//#")
 	{
 		vector <string> vUserData;
 		vUserData = clsString::Split(UserLine, Spreator);
-		return clsUser(enMode::enEmptyMode, vUserData[1], vUserData[2], vUserData[3], vUserData[4], vUserData[5], vUserData[6], vUserData[7]);
+		return clsUser(enMode::enUpdateMode, vUserData[0], vUserData[1], vUserData[2],
+			vUserData[3], vUserData[4], vUserData[5] ,stoi (vUserData[6]));
 		
 	}
 	static string _ConvertUserObjectToUserLine(clsUser User , string Spreator = "#//#")
@@ -36,7 +38,7 @@ private:
 		UserLine += User.Email + "#//#";
 		UserLine += User.Phone + "#//#";
 		UserLine += User.Password + "#//#";
-		UserLine += User.Permission;
+		UserLine +=to_string(User.Permission);
 		return UserLine;
 	}
 	static vector <clsUser> _LoadUsersDataFromFile()
@@ -80,7 +82,7 @@ private:
 	}
 	static clsUser _GetEmptyUserObject()
 	{
-		return clsUser(enEmptyMode, "", "", "", "", "", "", "");
+		return clsUser(enEmptyMode, "", "", "", "", "", "", 0);
 	}
 	
 	void _Update()
@@ -116,7 +118,7 @@ private:
 public:
 	
 	clsUser(enMode Mode,string FirstName,string LastName,string Emaile,
-		string Phone,string UserName ,string Password,string Permissions):
+		string Phone,string UserName ,string Password,int Permissions):
 		clsPerson(FirstName, LastName, Emaile, Phone)
 	{
 		_Mode = Mode;
@@ -154,15 +156,15 @@ public:
 	_declspec(property(get = GetPassword, put = SetPassword)) string Password;
 
 
-	 void SetPermissions(string Permissions)
+	 void SetPermissions(int Permissions)
 	{
 		_Permissions = Permissions;
 	}
-	 string GetPermissions() 
+	 int GetPermissions() 
 	 { 
 		 return _Permissions;
 	 }
-	_declspec(property(get = GetPermissions, put = SetPermissions)) string Permission;
+	_declspec(property(get = GetPermissions, put = SetPermissions)) int Permission;
 
 	static clsUser Find(string UserName)
 	{
@@ -271,7 +273,7 @@ public:
 	}
 	static clsUser GetAddNewUserObject(string UserName)
 	{
-		return clsUser(enMode::enAddNewMode, "", "", "", "", UserName, "", 0);
+		return clsUser(enMode::enAddNewMode, "", "", "", "","UserName", "", 0);
 	}
 	bool  Delete(string UserName)
 	{

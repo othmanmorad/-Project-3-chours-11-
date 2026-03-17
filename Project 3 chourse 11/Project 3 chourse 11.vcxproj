@@ -147,6 +147,7 @@
     <ClInclude Include="clsUpdateClientScreen.h" />
     <ClInclude Include="clsString.h" />
     <ClInclude Include="clsUser.h" />
+    <ClInclude Include="clsUsersListScreen.h" />
     <ClInclude Include="clsUtil.h" />
     <ClInclude Include="clsWithdrawScreen.h" />
   </ItemGroup>
