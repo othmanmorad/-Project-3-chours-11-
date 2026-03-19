@@ -168,7 +168,7 @@ public:
 	static string ReadString()
 	{
 		string s = "";
-		getline(cin, s);
+		getline(cin>>ws, s);
 
 		return s;
 	}

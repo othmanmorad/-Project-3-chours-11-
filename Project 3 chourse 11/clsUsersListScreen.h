@@ -17,7 +17,7 @@ private:
 		cout<<"|  "<< setw(12) << left << User.Phone;
 		cout<<"|  "<< setw(15) << left << User.Email;
 		cout<<"|  "<< setw(15) << left << User.Password;
-		cout<<"|  "<< setw(12) << left << User.Permission;
+		cout<<"|  "<< setw(12) << left << User.Permissions;
 		cout<<"|  "<< endl;
 	}
 
