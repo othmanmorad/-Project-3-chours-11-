@@ -5,6 +5,8 @@
 #include"clsInputValidate.h"
 #include"clsUsersListScreen.h"	
 #include"clsAddNewUserScreen.h"
+#include"clsDeleteUserScreen.h"
+
 using namespace std;
 class clsManageUsersScreen : protected clsScreen
 {
@@ -41,7 +43,8 @@ private:
 
 	static void _ShowDeleteUserScreen()
 	{
-		cout << setw(37) << left << "\nDelete User Screen Will be here ...\n";
+		//cout << setw(37) << left << "\nDelete User Screen Will be here ...\n";
+		clsDeleteUserScreen::ShowDeletUserScreen();
 	}
 
 	static void _ShowUpdateUserScreen()
