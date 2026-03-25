@@ -122,6 +122,11 @@ private:
 	public:
 		static void ShowManageUsersScreen()
 		{
+			if 
+				(!_CheckAccessRights(clsUser::enPermissions::pManageUsers))
+			{
+				return;
+			}
 			system("cls");
 			string Title = "\t  Manage Users Screen";
 			string SubTitle = "\n\t\t\t\t\t\tManage Users Options Screen\n";
