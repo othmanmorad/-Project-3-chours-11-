@@ -2,6 +2,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include"clsDate.h"
 #include"Global.h"
 
 using namespace std;
@@ -17,7 +18,17 @@ protected:
 			cout << "\n\t\t\t\t\t\t\t" << SubTitle;
 		}
 		cout << "\n\t\t\t\t\t----------------------------------------------\n";
+
+		cout << "\n\t\t\t\t\tCurrent User: " << CurrentUser.FullName() << " (" << CurrentUser.UserName << ")";
+		cout << "\n\t\t\t\t\tDate: "<<clsDate::DateToString(clsDate());
+
+		/* or you can write it like this
+		string Date = clsDate::GetSystemDate().DateToString();
+		cout << "\n\t\t\t\t\tDate: " << Date << endl;
+		*/
+		
 	}
+	
 
 	static bool _CheckAccessRights(clsUser::enPermissions Permissions)
 	{
