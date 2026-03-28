@@ -20,6 +20,10 @@ private:
 public:
 	static void ShowLoginRegisterScreen()
 	{
+		if (!_CheckAccessRights(clsUser::enPermissions::pShowLogInRegister))
+		{
+			return;
+		}
 		vector<clsUser:: stLoginRegisterRecord>vLoginRegisterRecord = clsUser::GetLoginRegisterList();
 		string Title = "\t  Login Register";
 		string SubTitle = "\n\t\t\t\t\t\tUsers List (" + to_string(vLoginRegisterRecord.size()) + ") User(s)\n";
