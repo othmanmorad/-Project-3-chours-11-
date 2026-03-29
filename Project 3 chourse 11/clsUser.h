@@ -405,11 +405,12 @@ public:
 		
     }
 
+
     void RegisterLogIn()
     {
 
         fstream MyFile;
-        MyFile.open("LoginRegister.txt", ios::out | ios ::app);
+        MyFile.open("LoginRegister.txt", ios::out | ios::app);
 
         string DataLine;
 
@@ -418,7 +419,7 @@ public:
 
 
 
-			DataLine = _PrepareLoginRecord();
+            DataLine = _PrepareLoginRecord();
             MyFile << DataLine << endl;
 
 
@@ -430,6 +431,30 @@ public:
 
 
     }
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     static  vector <stLoginRegisterRecord> GetLoginRegisterList()
     {
