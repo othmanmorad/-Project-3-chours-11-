@@ -1,11 +1,7 @@
-Hosam#//#Haddad#//#Hosam@gmail.com#//#0595611726#//#User1#//#123456#//#0
-Jamil#//#Adli#//#Jamil@gmail.com#//#23123123#//#User2#//#1234#//#-1
-Lina#//#Loay#//#Lina@gmail.com#//#1234#//#User3#//#125#//#-1
-Mazem#//#Kareem#//#Mazin@gmail.com#//#898234#//#User4#//#1234#//#-1
-Mohammed#//#Abu-Hadhoud#//#Msa@Gmail.com#//#838838#//#User5#//#5555#//#-1
-Alia#//#Ali#//#M@gmail.com#//#09388322#//#User6#//#4323#//#-1
-Saleh#//#Murad#//#Saleh@gemail.com#//#0595611726#//#User10#//#8889#//#-1
-Raed #//#Murad#//#Raed@gmail.com#//#0595611726#//#User12#//#1234#//#-1
-Sultan#//#Mohammed#//#Sultan@gmail.com#//#059#//#User13#//#123#//#0
-Murad#//#Firas#//#Nurad@gmil.com#//#059#//#User14#//#123#//#7
-Othman#//#Murad#//#Othman@gemil.com#//#0595611726#//#User16#//#2006#//#255
+Firas#//#Murad#//#Firas@gmail.com#//#0595611726#//#User1#//#3456#//#-1
+Mohammad#//#Murad#//#Mohammad@gmail.com#//#0595611726#//#User2#//#3456#//#-1
+Othman#//#Murad#//#Othman@gmail.com#//#0595611726#//#User3#//#3456#//#-1
+Hasan#//#Murad#//#Hasan@gmail.com#//#0595611726#//#User4#//#3456#//#-1
+Saleh#//#Murad#//#Saleh@gmail.com#//#0595611726#//#User5#//#3456#//#-1
+Murad#//#Firas#//#Murad@gmail.com#//#0595611726#//#User6#//#3456#//#-1
+Sultan#//#Mohammad#//#Sultan@gmail.com#//#0595611726#//#User7#//#3456#//#-1

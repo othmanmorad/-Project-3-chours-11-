@@ -15,7 +15,7 @@ private:
 		cout<<"|  "<< setw(15) << left << User.UserName;
 		cout<<"|  "<< setw(25) << left << User.FullName();
 		cout<<"|  "<< setw(12) << left << User.Phone;
-		cout<<"|  "<< setw(15) << left << User.Email;
+		cout<<"|  "<< setw(20) << left << User.Email;
 		cout<<"|  "<< setw(15) << left << User.Password;
 		cout<<"|  "<< setw(12) << left << User.Permissions;
 		cout<<"|  "<< endl;
@@ -32,7 +32,7 @@ public:
 		cout<<"|  "<< setw(15) << left << "UserName";
 		cout<<"|  "<< setw(25) << left << "FullName";
 		cout<<"|  "<< setw(12) << left << "Phone";
-		cout<<"|  "<< setw(15) << left << "Email";
+		cout<<"|  "<< setw(20) << left << "Email";
 		cout<<"|  "<< setw(15) << left << "Password";
 		cout<<"|  "<< setw(12) << left << "Permission";
 		cout << setw(8) << left << "\n_________________________________________________________________________________________________________________\n";

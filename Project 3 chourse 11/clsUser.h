@@ -27,7 +27,7 @@ private:
 		string LoginRecord = "";
 		LoginRecord += clsDate::GetSystemDateTimeString() + Spreators;
 		LoginRecord += UserName + Spreators;
-		LoginRecord += Password + Spreators;
+		LoginRecord += clsUtil::EncryptText(Password) + Spreators;
 		LoginRecord += to_string(Permissions);
 		return LoginRecord;
 	}
@@ -38,7 +38,7 @@ private:
         vUserData = clsString::Split(Line, Seperator);
 
         return clsUser(enMode::UpdateMode, vUserData[0], vUserData[1], vUserData[2],
-            vUserData[3], vUserData[4], vUserData[5], stoi(vUserData[6]));
+            vUserData[3], vUserData[4], clsUtil::DecryptText(vUserData[5]), stoi(vUserData[6]));
 
     }
 
@@ -51,7 +51,7 @@ private:
 		vLoginData = clsString::Split(Line, Seperator);
 		LoginRecord.DateTime = vLoginData[0];
 		LoginRecord.UserName = vLoginData[1];
-		LoginRecord.Password = vLoginData[2];
+		LoginRecord.Password = clsUtil::DecryptText(vLoginData[2]);
 		LoginRecord.Permissions = stoi(vLoginData[3]);
 
 		return LoginRecord; 
@@ -66,7 +66,7 @@ private:
         UserRecord += User.Email + Seperator;
         UserRecord += User.Phone + Seperator;
         UserRecord += User.UserName + Seperator;
-        UserRecord += User.Password + Seperator;
+        UserRecord += clsUtil::EncryptText(User.Password)+ Seperator;
         UserRecord += to_string(User.Permissions);
 
         return UserRecord;
