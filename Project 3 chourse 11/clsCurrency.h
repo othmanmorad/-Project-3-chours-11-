@@ -62,7 +62,7 @@ private:
 	static void _SaveCurrencysDataToFile(vector<clsCurrency>vCurrencys)
 	{
 		fstream MyFile;
-		MyFile.open("Clients.txt", ios::out);//write Mode
+		MyFile.open("Currencies.txt", ios::out);//write Mode
 		if (MyFile.is_open())
 		{
 			for (clsCurrency Currency : vCurrencys)

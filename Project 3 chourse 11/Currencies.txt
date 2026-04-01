@@ -3,7 +3,7 @@ Afghanistan#//#AFN#//#Afghanistan Afghani#//#87.480003
 Albania#//#ALL#//#Albania Lek(e)#//#109.010002
 Algeria#//#DZD#//#Algerian Dinar#//#137.046005
 American Samoa#//#USD#//#US Dollar#//#1.000000
-France#//#EUR#//#Euro#//#0.900000
+France#//#EUR#//#Euro#//#0.800000
 Angola#//#AOA#//#Angolan Kwanza#//#504.734009
 Anguilla#//#XCD#//#E.C. Dollar#//#2.700000
 Antigua and Barbuda#//#XCD#//#E.C. Dollar#//#2.700000
@@ -99,7 +99,7 @@ Israel#//#ILS#//#Israel Shekel#//#3.389000
 Italy#//#EUR#//#Euro#//#0.938000
 Jamaica#//#JMD#//#Jamaican Dollar#//#153.470001
 Japan#//#JPY#//#Japanese Yen#//#134.869995
-Jordan#//#JOD#//#Jordanian Dinar#//#0.708000
+Jordan#//#JOD#//#Jordanian Dinar#//#0.709000
 Kazakhstan#//#KZT#//#Kazakhstan Tenge#//#468.950012
 Kenya#//#KES#//#Kenyan Shilling#//#122.739998
 Kiribati#//#AUD#//#Australian Dollar#//#1.451000
