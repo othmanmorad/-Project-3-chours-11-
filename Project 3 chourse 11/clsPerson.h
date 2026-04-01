@@ -2,11 +2,12 @@
 
 #include <iostream>
 #include <string>
+#include "InterfaceCommunication.h"
 
 using namespace std;
 
 
-class clsPerson
+class clsPerson : public InterfaceCommunication
 {
 
 private :
@@ -104,6 +105,23 @@ public:
 		cout << "\nEmail : " << _Email << endl;
 		cout << "\nPhone : " << _Phone << endl;
 		cout << "\n------------------" << endl;
+	}
+
+	void SendEmail(string Title, string Body)
+	{
+		
+
+	}
+
+	void SendSMS(string Title, string Body)
+	{
+		
+	}
+
+	void SendFax(string Title, string Body)
+	{
+		
+
 	}
 
 };
